@@ -18,10 +18,11 @@ models:
 
 
   name: orders_transformed_data
-    description: 'Job to pour data to orders_row_data table'
+    description: 'Job to pour data to atheta'
     materialized: 'sync_job'
       job_name: 'transform_orders_and_insert_into_athena'
       start_from: 'BEGINNING'
       add_missing_columns: 'true'
       run_interval: '1 MINUTE'
       partitioned_by: 'p'artition_date'
+      map: 'MAP_COLUMNS_BY_NAME'
