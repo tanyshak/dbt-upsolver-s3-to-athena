@@ -1,5 +1,3 @@
-AS INSERT INTO default_glue_catalog.database_16e61b.orders_transformed_data MAP_COLUMNS_BY_NAME
-
 SELECT
   orderid AS order_id,
   MD5(customer.email) AS customer_id,
